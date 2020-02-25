@@ -130,10 +130,12 @@
     <ClCompile Include="test05_structure.cpp" />
     <ClCompile Include="test06_oop.cpp" />
     <ClCompile Include="test10_arithmentic.cpp" />
+    <ClCompile Include="test11_binary_tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h" />
     <ClInclude Include="test10_arithmentic.h" />
+    <ClInclude Include="test11_binary_tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

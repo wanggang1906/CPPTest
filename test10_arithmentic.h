@@ -4,7 +4,6 @@
 #include<string>
 
 #ifndef _test06_oop_H_ // 开头和结尾加上，表示预编译
-#define _test06_oop_H_ // 宏定义
 
 class DataStructuresAndAlgorithms
 {

@@ -10,6 +10,7 @@
 // .h头文件会报错，但cpp的可以
 
 #include"test10_arithmentic.cpp"
+#include"test11_binary_tree.cpp"
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
 
@@ -86,13 +87,20 @@ int main() // 函数头
 	PerA personalA;
 	//personalA.saidSelfName();
 	//personalA.saidWord();
-	
-
-
 
 	// test10
 	DataStructuresAndAlgorithms alg;
 	alg.testSort();
+
+	// test11
+	struct TreeNode {
+		int val;
+		TreeNode* left;
+		TreeNode* right;
+		TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+	};
+	//BinaryTree bTree;
+	//bTree.maxDepth;
 	
 	return 0;
  }

@@ -7,25 +7,33 @@
 class DataStructuresAndAlgorithms
 {
 public:
-	//int sa[] = {1,2,3,4,5,6,7,5 };
+	// 算法思想：
+	// https://blog.csdn.net/weixin_41190227/article/details/86600821
 
 
 /*
 1.插入排序
+思想：扫描未排序的插入排序好的序列中，采用O(1)的空间复杂度，把排好序的元素逐个向后移动
 时间复杂度：平均O(n2)，最好O(n)，最坏O(n2)
 空间复杂度：O(1)
 稳定性：稳定
 */
 void insertSort(int a[], int n)
 {
-	std::cout << "插入排序";
+	std::cout << "插入排序 \n";
 	int i, j, t;
-	for (i = 1; i < n; i++)
+	// 已排好的序列
+	int sortList[7] = {}; // 数组大小固定，不能用n，因为n的值可通过指针改变，是变量
+	for (i = 1; i < n; i++) // 循环不从第一个开始，第一个默认有序，从第二个元素开始进行插入
 	{
 		t = a[i];
 		for (j = i - 1; j >= 0 && t < a[j]; --j)
+		{
 			a[j + 1] = a[j];
-		a[j + 1] = t;
+			a[j + 1] = t;
+		}
+		sortList[i] = a[i]; // i是内存地址
+		std::cout << "已排序好的序列：" << sortList[i] << "\n";
 	}
 	std::cout << "结束";
 }
