@@ -6,7 +6,10 @@
 #include <iostream> // 预处理器编译指令，include
 					// C++的头文件可以是.h的或无扩展名，C语言的是.h的
 
-//#include<test06_oop>
+#include"test06_oop.cpp" // 自定义头文件在main方法中引入
+// .h头文件会报错，但cpp的可以
+
+#include"test10_arithmentic.cpp"
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
 
@@ -80,12 +83,16 @@ int main() // 函数头
 	//jiaoHuan();
 
 	// test06
+	PerA personalA;
+	//personalA.saidSelfName();
+	//personalA.saidWord();
 	
 
 
 
 	// test10
-
+	DataStructuresAndAlgorithms alg;
+	alg.testSort();
 	
 	return 0;
  }

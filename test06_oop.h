@@ -16,6 +16,7 @@ public:
 	std::string name;
 	float age;
 	int a;
+
 	void saidWord(); // 只写方法的定义，cpp中写方法的实现
 };
 

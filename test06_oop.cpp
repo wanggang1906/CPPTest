@@ -9,6 +9,7 @@ public:
 	std::string name;
 	float age;
 	int a;
+
 	void saidWord()
 	{
 		std::cout << "输出";
@@ -19,7 +20,7 @@ public:
 class PerA : public Personal
 {
 public:
-	int perAParticularAttribute;
+	int perAParticularAttribute = 021;
 
 	void saidSelfName()
 	{

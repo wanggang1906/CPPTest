@@ -41,5 +41,8 @@
     <ClInclude Include="test06_oop.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="test10_arithmentic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
