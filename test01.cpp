@@ -11,6 +11,7 @@
 
 #include"test10_arithmentic.cpp"
 #include"test11_binary_tree.cpp"
+//#include"test11_binary_tree.h" // 同时引入.cpp和.h会引起重复编译的错误
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
 
@@ -93,13 +94,17 @@ int main() // 函数头
 	alg.testSort();
 
 	// test11
+	/*
 	struct TreeNode {
 		int val;
 		TreeNode* left;
 		TreeNode* right;
 		TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-	};
-	//BinaryTree bTree;
+	};*/
+	
+	//BinaryTree binaryTree;
+	//binaryTree.testStruct();
+
 	//bTree.maxDepth;
 	
 	return 0;
