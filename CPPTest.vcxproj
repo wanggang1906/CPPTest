@@ -129,6 +129,10 @@
     <ClCompile Include="test04_String.cpp" />
     <ClCompile Include="test05_structure.cpp" />
     <ClCompile Include="test06_oop.cpp" />
+    <ClCompile Include="test10_arithmentic.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test06_oop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

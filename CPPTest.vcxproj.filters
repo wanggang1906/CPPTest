@@ -33,5 +33,13 @@
     <ClCompile Include="test06_oop.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test10_arithmentic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test06_oop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

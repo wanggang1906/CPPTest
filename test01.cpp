@@ -6,6 +6,8 @@
 #include <iostream> // 预处理器编译指令，include
 					// C++的头文件可以是.h的或无扩展名，C语言的是.h的
 
+//#include<test06_oop>
+
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
 
 
@@ -29,6 +31,14 @@ int structureTest();
 void jiaoHuan();
 //void swap(int* x, int* y);
 
+// test06
+
+
+
+// test10
+
+
+
 
 
 
@@ -41,7 +51,7 @@ int main() // 函数头
 	//scanf("%sa",sa); // C++ 可以使用所有C的标准输入输出函数，好像有错啊
 	//printf("%sa", sa);
 	printf("这是主类的 \n");
-	cout<< "入口文件的";
+	cout << "入口文件的";
 	cout << "主方法" << "\n"; // endl可用“\n”代替
 	// printf是C中的标准输入输出函数，而cout是iostream类中的方法，是对运算符的重载
 
@@ -67,7 +77,15 @@ int main() // 函数头
 
 	// test05
 	//structureTest();
-	jiaoHuan();
+	//jiaoHuan();
+
+	// test06
+	
+
+
+
+	// test10
+
 	
 	return 0;
  }
