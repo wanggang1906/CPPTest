@@ -31,6 +31,7 @@ int CandF();
 int testString();
 int pointerTest();
 void dataSize();
+void dataType();
 
 // test05
 int structureTest();
@@ -45,6 +46,10 @@ void pointTest();
 
 
 // test10
+
+
+// test20
+int main20();
 
 
 
@@ -83,7 +88,8 @@ int main() // 函数头
 	// test04
 	//testString();
 	//pointerTest();
-	dataSize();
+	//dataSize();
+	//dataType();
 
 	// test05
 	//structureTest();
@@ -115,6 +121,9 @@ int main() // 函数头
 	//binaryTree.testStruct();
 
 	//bTree.maxDepth;
+
+	// test20
+	main20();
 	
 	return 0;
  }

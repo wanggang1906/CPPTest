@@ -133,6 +133,7 @@
     <ClCompile Include="test10_arithmentic.cpp" />
     <ClCompile Include="test11_binary_tree.cpp" />
     <ClCompile Include="test12_matrix01.cpp" />
+    <ClCompile Include="test20_stl.cpp" />
     <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -48,6 +48,9 @@
     <ClCompile Include="test12_matrix01.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test20_stl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h">

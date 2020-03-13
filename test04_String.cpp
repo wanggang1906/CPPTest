@@ -127,6 +127,16 @@ void dataSize() {
 
 
 
+// 数据类型复习
+void dataType() {
+	std::cout<< "数据\n";
+	int a;
+	std::cout << sizeof(a)<<"\n";
+	float b;
+	std::cout << sizeof(b)<<"\n";
+}
+
+
 
 
 
