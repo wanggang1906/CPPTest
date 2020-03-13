@@ -13,12 +13,14 @@ void pointTest() {
 	// 来源： 
     // https://www.cnblogs.com/sumuncle/p/9773955.html
 	// https://blog.csdn.net/weixin_39640298/article/details/84900326
+	// https://www.cnblogs.com/aquester/p/11469872.html
+
 	// 几种类型指针
-	int *ptr; // 指针的类型是int *	// 指针所指向的类型是int
-	char *ptr; // 指针的类型是char *	// 指针所指向的类型是char
-	int **ptr; // 指针的类型是int **	// 指针所指向的类型是int *
-	int(*ptr)[3]; // 指针的类型是int (*)[3]		// 指针所指向的类型是int()[3]	// ()可解决优先级问题
-	int *(*ptr)[4]; // 指针的类型是int *(*)[4]	// 指针所指向的类型是int *()[4]
+	//int *ptr; // 指针的类型是int *	// 指针所指向的类型是int
+	//char *ptr; // 指针的类型是char *	// 指针所指向的类型是char
+	//int **ptr; // 指针的类型是int **	// 指针所指向的类型是int *
+	//int(*ptr)[3]; // 指针的类型是int (*)[3]		// 指针所指向的类型是int()[3]	// ()可解决优先级问题
+	//int *(*ptr)[4]; // 指针的类型是int *(*)[4]	// 指针所指向的类型是int *()[4]
 
 	// 几种特殊的指针
 	int num = 97;
@@ -31,6 +33,8 @@ void pointTest() {
 	int(*p_arr)[3] = &arr;
 	int (*fp_add)(int, int) = add;  //p_add是指向函数add的函数指针
 	const char* p_msg = "Hello world";//p_msg是指向字符数组的指针
+
+	std::cout << sizeof(num);
 
 }
 
