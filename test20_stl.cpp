@@ -3,7 +3,8 @@
 #include <vector>
 
 
-
+// 教程网址
+// http://c.biancheng.net/stl/
 
 // STL是容器的集合，也是组件的集合。
 // 容器包括list, vector向量, set, map 等
