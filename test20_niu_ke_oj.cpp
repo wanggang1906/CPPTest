@@ -26,6 +26,7 @@ int cmp2(struct stu a, struct stu b) {
         return a.i < b.i;
     }
 }
+/*
 int main20_1() {
     int num;
     int flag;
@@ -48,3 +49,4 @@ int main20_1() {
     }
     return 0;
 }
+*/

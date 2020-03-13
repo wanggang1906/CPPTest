@@ -31,16 +31,17 @@ void pointTest() {
 	int* p_arr1 = arr;		//p_arr1意思是指向数组第一个元素的指针
 	float* p_score = &score;
 	int(*p_arr)[3] = &arr;
-	int (*fp_add)(int, int) = add;  //p_add是指向函数add的函数指针
+	//int (*fp_add)(int, int) = add;  //p_add是指向函数add的函数指针
 	const char* p_msg = "Hello world";//p_msg是指向字符数组的指针
 
 	std::cout << sizeof(num);
 
 }
 
+/*
 int add(int a,int b) {
 	return 0;
-}
+}*/
 
 void pointSize() {
 	printf("指针大小相关");

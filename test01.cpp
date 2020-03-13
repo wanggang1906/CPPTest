@@ -30,6 +30,7 @@ int CandF();
 // test04
 int testString();
 int pointerTest();
+void dataSize();
 
 // test05
 int structureTest();
@@ -82,6 +83,7 @@ int main() // 函数头
 	// test04
 	//testString();
 	//pointerTest();
+	dataSize();
 
 	// test05
 	//structureTest();
@@ -94,7 +96,7 @@ int main() // 函数头
 
 
 	// test07
-	pointTest();
+	//pointTest();
 
 	// test10
 	//DataStructuresAndAlgorithms alg;
