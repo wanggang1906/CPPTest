@@ -132,12 +132,14 @@
     <ClCompile Include="test07_PointTo.cpp" />
     <ClCompile Include="test10_arithmentic.cpp" />
     <ClCompile Include="test11_binary_tree.cpp" />
-    <ClCompile Include="test20_niu_ke_oj.cpp" />
+    <ClCompile Include="test12_matrix01.cpp" />
+    <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h" />
     <ClInclude Include="test10_arithmentic.h" />
     <ClInclude Include="test11_binary_tree.h" />
+    <ClInclude Include="test12_matrix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
