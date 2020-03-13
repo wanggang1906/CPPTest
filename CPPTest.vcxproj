@@ -129,8 +129,10 @@
     <ClCompile Include="test04_String.cpp" />
     <ClCompile Include="test05_structure.cpp" />
     <ClCompile Include="test06_oop.cpp" />
+    <ClCompile Include="test07_PointTo.cpp" />
     <ClCompile Include="test10_arithmentic.cpp" />
     <ClCompile Include="test11_binary_tree.cpp" />
+    <ClCompile Include="test20_niu_ke_oj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h" />

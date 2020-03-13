@@ -38,6 +38,9 @@ void jiaoHuan();
 
 // test06
 
+// test07
+void pointTest();
+
 
 
 // test10
@@ -85,13 +88,17 @@ int main() // º¯ÊýÍ·
 	//jiaoHuan();
 
 	// test06
-	PerA personalA;
+	//PerA personalA;
 	//personalA.saidSelfName();
 	//personalA.saidWord();
 
+
+	// test07
+	pointTest();
+
 	// test10
-	DataStructuresAndAlgorithms alg;
-	alg.testSort();
+	//DataStructuresAndAlgorithms alg;
+	//alg.testSort();
 
 	// test11
 	/*
