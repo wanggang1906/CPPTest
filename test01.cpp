@@ -7,7 +7,9 @@
 					// C++的头文件可以是.h的或无扩展名，C语言的是.h的
 
 #include"test06_oop.cpp" // 自定义头文件在main方法中引入
-// .h头文件会报错，但cpp的可以
+// .h头文件会报错，报无法解析的外部符号，	但cpp的可以
+
+#include"test07_PointTo.cpp" 
 
 #include"test10_arithmentic.cpp"
 #include"test11_binary_tree.cpp"
@@ -41,7 +43,7 @@ void jiaoHuan();
 // test06
 
 // test07
-void pointTest();
+//void pointTest();
 
 
 
@@ -102,7 +104,9 @@ int main() // 函数头
 
 
 	// test07
-	//pointTest();
+	PointTo pTo;
+	pTo.pointSize();
+	pTo.pointTest();
 
 	// test10
 	//DataStructuresAndAlgorithms alg;
@@ -123,7 +127,7 @@ int main() // 函数头
 	//bTree.maxDepth;
 
 	// test20
-	main20();
+	//main20();
 	
 	return 0;
  }
