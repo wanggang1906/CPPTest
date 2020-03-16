@@ -130,6 +130,7 @@
     <ClCompile Include="test05_structure.cpp" />
     <ClCompile Include="test06_oop.cpp" />
     <ClCompile Include="test07_PointTo.cpp" />
+    <ClCompile Include="test08_pointClass.cpp" />
     <ClCompile Include="test10_arithmentic.cpp" />
     <ClCompile Include="test11_binary_tree.cpp" />
     <ClCompile Include="test12_matrix01.cpp" />

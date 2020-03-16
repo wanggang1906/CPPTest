@@ -104,9 +104,14 @@ int main() // 函数头
 
 
 	// test07
-	PointTo pTo;
+	class PointTo pTo; // 类实例化时class的作用
 	pTo.pointSize();
-	pTo.pointTest();
+	pTo.pointDef();
+	pTo.pointTestMain();
+
+
+	// test08
+	
 
 	// test10
 	//DataStructuresAndAlgorithms alg;

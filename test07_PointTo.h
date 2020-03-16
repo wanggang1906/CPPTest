@@ -8,10 +8,15 @@
 
 class PointTo {
 public:
-	void pointTest();
+	void pointDef();
 	int add(int a, int b);
 
 	void pointSize();
+	void pointType();
+	void pointArray();
+
+	void pointTestMain();
+	void pointTest01();
 };
 
 
