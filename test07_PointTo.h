@@ -16,7 +16,8 @@ public:
 	void pointArray();
 
 	void pointTestMain();
-	void pointTest01();
+	void pointTest01(int* p, int* a);
+	void pointTest02();
 };
 
 
