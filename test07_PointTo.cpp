@@ -37,7 +37,22 @@ public: // 公开的属性和方法
 		//int (*fp_add)(int, int) = add;  //p_add是指向函数add的函数指针
 		const char* p_msg = "Hello world";//p_msg是指向字符数组的指针
 
-		std::cout << sizeof(num);
+		std::cout << "sizeof是表示变量的大小："<<sizeof(num)<<"\n";
+
+		// 物理地址
+		int wu = 12;
+		std::cout << "物理地址是：(&操作符)"<<&wu << "\n";
+
+		// *和&的区别
+		int* li = &wu;
+		std::cout << "*li的值(即是*li所指内存空间所存的东西)：" << *li <<" li的地址："<< li << " &wu的地址：" << &wu << "\n";
+		std::cout << "*li的大小：" << sizeof(li) << "\n";
+		std::cout << "*是取地址对应的值，&是取地址：" <<*&wu << "\n";
+
+		// 引用地址的内容 - 地址前加0x，表示是16进制，不能随意访问不知道的内存空间
+		//std::cout << "0019FF3C = " << *(int*)0x0019FF3C << "\n";
+
+
 
 
 	}
@@ -103,8 +118,11 @@ public: // 公开的属性和方法
 		int e = 14;
 		a = &d; // 取址运算符，结果是一个指针
 		b = &e;
+		this->pointDef();
+		this->pointSize();
 		this->pointTest01(a,b); // this指针调用本类方法
 		this->pointArray();
+	
 
 
 	}

@@ -105,8 +105,6 @@ int main() // 函数头
 
 	// test07
 	class PointTo pTo; // 类实例化时class的作用
-	pTo.pointSize();
-	pTo.pointDef();
 	pTo.pointTestMain();
 
 

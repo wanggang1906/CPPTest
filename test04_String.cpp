@@ -1,5 +1,6 @@
 #include <iostream>
-#include <string>
+#include <string> // 引入string类
+#include<cstring> // c类型的string
 
 using namespace std;
 
@@ -10,6 +11,16 @@ int testString() {
 	cout << "输入一个字符串";
 	std::getline(std::cin,str);
 	cout << str;
+
+	char cstr[20] = "ee"; // 用字符数组来承载字符串
+	cout << cstr;
+
+	string sstr = "ss";
+	cout << sstr;
+
+	string in;
+	cin >> in; // cin可以输入多段字符串
+	cout << "输入的内容为：" << in<<"\n";
 	return 0;
 }
 
