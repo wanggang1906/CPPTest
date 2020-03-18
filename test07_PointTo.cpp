@@ -70,11 +70,11 @@ public: // 公开的属性和方法
 		
 		int *p;
 		int s = 10;
-		std::cout <<"指针的大小："<<sizeof(p)<<"_"<<s; // 输出流可以输出不同类型的数据
+		std::cout <<"指针的大小："<< sizeof(p) <<"_"<<s; // 输出流可以输出不同类型的数据
 
 		int *ps[3];
 
-		std::cout <<"ps的地址是: %d   "<<&ps<<"\n"; // &取地址符，%d十进制，%p十六进制
+		std::cout <<"ps的地址是: %d   "<< &ps <<"\n"; // &取地址符，%d十进制，%p十六进制
 		
 	}
 
@@ -102,9 +102,27 @@ public: // 公开的属性和方法
 		int* ary[12] = {}; // []的优先级比*高，则首先是一个ary[12]的数组，int*修饰这个数组，即表明数组中每个元素都是int*类型的。即为存储指针的数组
 		int(*aryp)[10] = NULL; // 【本质上是int(*)[10] aryp】()的优先级高于[]，*和aryp构成指针的定义，所以它首先是一个指针，int修饰数组，数组没有名字，是匿名数组。即aryp是一个指针，指向有10个int型元素的数组
 		
-		std::cout << "存储的指针值为：" <<ary[0] << "\n";
-		std::cout << "指向的数组首地址为：" << aryp << "\n";
+		int b = 12;
+		int* a[5] = {&b,&b,&b,&b};
+		int(*ap)[5] = NULL;
+		std::cout << "存储的指针值为：" <<a[0] << "\n";
+		std::cout << "指向的数组首地址为：" << ap << "\n";
+		std::cout << "*ap的值：" << *ap << "\n"; // *ap是数组的首地址？？？
 
+		b = 3;
+		int* apam = &b;
+		std::string re;
+		re = this->factonOfPoint(apam,b);
+		std::cout << re << "\n";
+
+	}
+
+	// 带指针的函数
+	std::string factonOfPoint(int* a,int b) {
+		// 两种传参的区别
+		std::cout << "传入的值是：" << *a << "和" << b << "\n";
+
+		return "ok";
 	}
 
 
