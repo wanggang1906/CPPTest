@@ -9,7 +9,7 @@ int testString() {
 	std::string str; // 字符串是一个对象，在C++标准库中，功能非常多，如提取，比较，搜索字符串
 
 	cout << "输入一个字符串";
-	std::getline(std::cin,str);
+	std::getline(std::cin,str); // getline()不是iostream类的方法，而是使用string类中的一个友元函数
 	cout << str;
 
 	char cstr[20] = "ee"; // 用字符数组来承载字符串
