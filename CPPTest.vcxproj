@@ -64,12 +64,16 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config\opencv420.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\OpenCV\opencv\build\include\opencv2;E:\OpenCV\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\OpenCV\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -90,6 +94,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -135,6 +140,7 @@
     <ClCompile Include="test11_binary_tree.cpp" />
     <ClCompile Include="test12_matrix01.cpp" />
     <ClCompile Include="test20_stl.cpp" />
+    <ClCompile Include="test40_opencv.cpp" />
     <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +149,7 @@
     <ClInclude Include="test10_arithmentic.h" />
     <ClInclude Include="test11_binary_tree.h" />
     <ClInclude Include="test12_matrix.h" />
+    <ClInclude Include="test40_opencv.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
