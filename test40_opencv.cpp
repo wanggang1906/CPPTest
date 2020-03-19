@@ -26,12 +26,13 @@ public:
 		
 		int stature = 0;
 		std::string result;
-		stature = this->shwoImage();
+		//stature = this->shwoImage();
 		//stature = this->openCamera();
 		//this->openVideo();
-		//std::cout << "执行结果" << stature << "\n";
+		stature = this->rgbOrGbr();
+		std::cout << "执行结果" << stature << "\n";
 
-		result = this->findHumanFace();
+		//result = this->findHumanFace();
 		std::cout << "执行结果：" << result << "\n";
 	}
 
@@ -171,7 +172,7 @@ public:
 
 		namedWindow("src", WINDOW_AUTOSIZE); // 原始图窗口
 		namedWindow("gray_face", WINDOW_AUTOSIZE); // 灰度图窗口
-		namedWindow("binary_face", WINDOW_AUTOSIZE);
+		namedWindow("binary_face", WINDOW_AUTOSIZE); // 二值图窗口
 		vector<Rect> faces, eyes; // 在using namespace std中，也可通过 #include<vector>引入
 
 		faceCascade.detectMultiScale(imgGray, faces, 1.2, 5, 0, Size(30, 30)); // 检测的参数，表示框的范围
@@ -218,6 +219,36 @@ public:
 
 	// 有趣的例子
 	// https://blog.csdn.net/weixin_42142612/article/details/80804039
+	// 像素可视化插件
+	// https://blog.csdn.net/u011574296/article/details/73286820
+	int rgbOrGbr()
+	{
+		cv::Mat src = cv::imread(".\\image\\face\\fa01.jpeg", 1);
+		if (src.empty() || src.channels() != 3)
+		{
+			cout << "Source image load error!" << endl;
+			return -1;
+		}
+
+		//采用CV_BGR2GRAY,转换公式Gray = 0.1140*B + 0.5870*G + 0.2989*R
+		cv::Mat bgr2grayImg;
+		cvtColor(src, bgr2grayImg, CV_BGR2GRAY);
+
+		//采用CV_RGB2GRAY,转换公式Gray = 0.1140*R + 0.5870*G + 0.2989*B
+		cv::Mat rgb2grayImg;
+		cvtColor(src, rgb2grayImg, CV_RGB2GRAY);
+
+		//采用CV_GRAY2BGR,转换公式B = G = R = Gray
+		cv::Mat gray2bgrImg;
+		cvtColor(bgr2grayImg, gray2bgrImg, CV_GRAY2BGR);
+
+		//采用CV_GRAY2RGB,转换公式R = G = B = Gray
+		cv::Mat gray2rgbImg;
+		cvtColor(rgb2grayImg, gray2rgbImg, CV_GRAY2RGB);
+
+		waitKey(0);
+		return 0;
+	}
 
 	// 活体检测
 

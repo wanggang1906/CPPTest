@@ -54,7 +54,8 @@ public:
 	void openVideo();
 
 	std::string findHumanFace();
-	void DetectFace(cv::Mat img, cv::Mat imgGray, CascadeClassifier faceCascade, CascadeClassifier eyes_Cascade);
+	//void DetectFace(cv::Mat img, cv::Mat imgGray, CascadeClassifier faceCascade, CascadeClassifier eyes_Cascade);
+	int rgbOrGbr();
 
 	
 };
