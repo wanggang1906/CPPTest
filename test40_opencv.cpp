@@ -24,14 +24,15 @@ public:
 	// cv主函数
 	void opencvMain() {
 		
-		int stature;
+		int stature = 0;
 		std::string result;
-		//stature = this->shwoImage();
+		stature = this->shwoImage();
 		//stature = this->openCamera();
-		std::cout << "执行结果" << stature << "\n";
+		//this->openVideo();
+		//std::cout << "执行结果" << stature << "\n";
 
 		result = this->findHumanFace();
-		std::cout << "执行结果" << result << "\n";
+		std::cout << "执行结果：" << result << "\n";
 	}
 
 	// 显示图片
@@ -49,7 +50,7 @@ public:
 
 		}
 
-		namedWindow("test_opencv_setup-jpg", 0); // 新建窗口
+		namedWindow("test_opencv_setup-jpg", 10); // 新建窗口,并设置显示类型，其类型是一个枚举。若为WINDOW_AUTOSIZE则自适应图像大小。
 		imshow("test_opencv_setup-jpg", imageJpg); // 装入图片
 
 		if (imagePng.empty()) {
@@ -105,7 +106,7 @@ public:
 	void openVideo() {
 
 		VideoCapture cap;
-		cap.open("E://2.avi"); //打开视频,以上两句等价于VideoCapture cap("E://2.avi");
+		cap.open(".\\image\\video\\v.mp4"); //打开视频,以上两句等价于VideoCapture cap("E://2.avi");
 		
 	     //cap.open("http://www.laganiere.name/bike.avi");//也可以直接从网页中获取图片，前提是网页有视频，以及网速够快
 		if (!cap.isOpened()) return; //如果视频不能正常打开则返回
@@ -115,7 +116,7 @@ public:
 			 cap >> frame;//等价于cap.read(frame);
 			 if (frame.empty()) break; //如果某帧为空则退出循环
 			 imshow("video", frame);
-			 waitKey(20);//每帧延时20毫秒
+			 waitKey(50);//每帧延时20毫秒
 		}
 		cap.release();//释放资源
 	}
@@ -129,33 +130,37 @@ public:
 	std::string findHumanFace()
 	{
 		// opencv库中的类
-		CascadeClassifier faceCascade;
+		CascadeClassifier faceCascade; // 人脸分类器
 		CascadeClassifier eyes_Cascade;
 
 		VideoCapture cap;
-		if (!cap.open("C:\\Users\\cb\\Downloads\\b.mp4")) { // 检测视频中的人脸
+		if (!cap.open(".\\image\\video\\faceVideo.mp4")) { // 检测视频中的人脸
 			std::cout << "摄像头打开失败!!" << "\n";
-			return "失败";
+			return "摄像头打开失败";
 		}
 		if (!faceCascade.load(".\\model\\haarcascade_frontalface_alt2.xml")) { // 加载人脸分类器
 			std::cout << "人脸检测级联分类器没找到！！" << "\n";
-			return "失败";
+			return "加载人脸分类器失败";
 		}
 		if (!eyes_Cascade.load(".\\model\\haarcascade_eye_tree_eyeglasses.xml")) { // 加载人眼分类器
 			std::cout << "眼睛检测级联分类器没找到！！" << "\n";
-			return "失败";
+			return "加载人眼分类器失败";
 		}
 		Mat img, imgGray;
 		int fps = 60; // 帧数
 		while (true) {
 			cap >> img;
-			cvtColor(img, imgGray, CV_BGR2GRAY);
-			equalizeHist(imgGray, imgGray);//直方图均匀化 - 直方图均衡化
-			this->DetectFace(img, imgGray, faceCascade, eyes_Cascade);
-
-			waitKey(1000 / fps);
+			if (img.empty()) break;
+			else
+			{
+				cvtColor(img, imgGray, CV_BGR2GRAY);
+				equalizeHist(imgGray, imgGray);//直方图均匀化 - 直方图均衡化
+				this->DetectFace(img, imgGray, faceCascade, eyes_Cascade);
+				waitKey(1000 / fps); // 等待若干毫秒后关闭窗口，若为0或()，则一直等待
+			}
 		}
-		return 0;
+		cap.release(); // 释放资源
+		return "成功";
 	}
 
 	void DetectFace(Mat img, Mat imgGray, CascadeClassifier faceCascade,CascadeClassifier eyes_Cascade) {
@@ -164,29 +169,46 @@ public:
 		//CascadeClassifier faceCascade;
 		//CascadeClassifier eyes_Cascade;
 
-		namedWindow("src", WINDOW_AUTOSIZE);
-		vector<Rect> faces, eyes; // 在using namespace std中
-		faceCascade.detectMultiScale(imgGray, faces, 1.2, 5, 0, Size(30, 30));
-		for (auto b : faces) {
-			std::cout << "输出一张人脸位置：(x,y):" << "(" << b.x << "," << b.y << ") , (width,height):(" << b.width << "," << b.height << ")" << "\n";
-		}
-		if (faces.size() > 0) {
-			for (size_t i = 0; i < faces.size(); i++) {
-				putText(img, "ugly man!", cvPoint(faces[i].x, faces[i].y - 10), FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 0, 255));
+		namedWindow("src", WINDOW_AUTOSIZE); // 原始图窗口
+		namedWindow("gray_face", WINDOW_AUTOSIZE); // 灰度图窗口
+		namedWindow("binary_face", WINDOW_AUTOSIZE);
+		vector<Rect> faces, eyes; // 在using namespace std中，也可通过 #include<vector>引入
 
+		faceCascade.detectMultiScale(imgGray, faces, 1.2, 5, 0, Size(30, 30)); // 检测的参数，表示框的范围
+
+		for (auto b : faces) { // auto的变量类型是由编译器推导的出的
+			// x,y是人脸左下角的坐标
+			std::cout << "输出一张人脸位置：(x,y):" << "(" << b.x << "," << b.y << ") , (宽度,高度):(" << b.width << "," << b.height << ")" << "\n";
+		}
+		
+		// 在每一帧上把检测到的人脸标记出来
+		if (faces.size() > 0) {
+			for (size_t i = 0; i < faces.size(); i++) { // size_t 是size type，保存的是表示大小类型的整数，类似int，long
+				putText(img, "big face !!!", cvPoint(faces[i].x, faces[i].y - 10), FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 0, 255));
+
+				// 绘制矩形
+				// Point是点的模板类，Scalar是颜色的模板类，是一个向量
 				rectangle(img, Point(faces[i].x, faces[i].y), Point(faces[i].x + faces[i].width, faces[i].y + faces[i].height), Scalar(0, 0, 255), 1, 8);
 				std::cout << faces[i] << "\n";
-				//将人脸从灰度图中抠出来
+
+				// 将人脸从灰度图中抠出来
 				Mat face_ = imgGray(faces[i]);
+				Mat result;
+				imshow("gray_face", face_); // 显示灰度图
 				eyes_Cascade.detectMultiScale(face_, eyes, 1.2, 2, 0, Size(30, 30));
+
+				threshold(face_, result, 170, 255, CV_THRESH_BINARY); // 把face_进行二值化后输出到resule中
+				imshow("binary_face", result);
 				for (size_t j = 0; j < eyes.size(); j++) {
+
+					// 级联分类器
 					Point eye_center(faces[i].x + eyes[j].x + eyes[j].width / 2, faces[i].y + eyes[j].y + eyes[j].height / 2);
 					int radius = cvRound((eyes[j].width + eyes[j].height) * 0.25);
 					circle(img, eye_center, radius, Scalar(65, 105, 255), 4, 8, 0);
 				}
 			}
 		}
-		imshow("src", img);
+		imshow("src", img); // 输出原图
 	}
 
 
