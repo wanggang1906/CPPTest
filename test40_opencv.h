@@ -57,6 +57,10 @@ public:
 	//void DetectFace(cv::Mat img, cv::Mat imgGray, CascadeClassifier faceCascade, CascadeClassifier eyes_Cascade);
 	int rgbOrGbr();
 
+	int findFace2();
+	//void detectAndDraw(Mat& img, CascadeClassifier& cascade,
+	//	CascadeClassifier& nestedCascade, double scale, bool tryflip);
+
 	
 };
 
