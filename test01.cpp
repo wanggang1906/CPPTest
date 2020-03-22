@@ -15,6 +15,7 @@
 #include"test11_binary_tree.cpp"
 //#include"test11_binary_tree.h" // 同时引入.cpp和.h会引起重复编译的错误
 
+#include "test30_data_str_alg.cpp"
 #include "test40_opencv.cpp"
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
@@ -54,11 +55,6 @@ void jiaoHuan();
 
 // test20
 int main20();
-
-
-
-
-
 
 
 
@@ -106,7 +102,7 @@ int main() // 函数头
 
 
 	// test07
-	class PointTo pTo; // 类实例化时class的作用
+	//class PointTo pTo; // 类实例化时class的作用???
 	//pTo.pointTestMain();
 
 
@@ -134,11 +130,15 @@ int main() // 函数头
 	// test20
 	//main20();
 
+	// test30
+	DataStructuresAndAlgorithms da;
+	da.DAMain();
+
 
 
 	// test40
 	opencvTest cvt;
-	cvt.opencvMain();
+	//cvt.opencvMain();
 	
 	return 0;
  }

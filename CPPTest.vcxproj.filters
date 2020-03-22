@@ -57,6 +57,9 @@
     <ClCompile Include="test40_opencv.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test30_data_str_alg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="test40_opencv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test30_data_str_alg.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

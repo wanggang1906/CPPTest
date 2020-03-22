@@ -141,6 +141,7 @@
     <ClCompile Include="test11_binary_tree.cpp" />
     <ClCompile Include="test12_matrix01.cpp" />
     <ClCompile Include="test20_stl.cpp" />
+    <ClCompile Include="test30_data_str_alg.cpp" />
     <ClCompile Include="test40_opencv.cpp" />
     <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="test10_arithmentic.h" />
     <ClInclude Include="test11_binary_tree.h" />
     <ClInclude Include="test12_matrix.h" />
+    <ClInclude Include="test30_data_str_alg.h" />
     <ClInclude Include="test40_opencv.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
