@@ -83,5 +83,8 @@
     <ClInclude Include="test30_data_str_alg.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="test05_structure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

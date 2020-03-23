@@ -146,6 +146,7 @@
     <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="test05_structure.h" />
     <ClInclude Include="test06_oop.h" />
     <ClInclude Include="test07_PointTo.h" />
     <ClInclude Include="test10_arithmentic.h" />

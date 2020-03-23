@@ -5,6 +5,7 @@
 
 #include <iostream> // 预处理器编译指令，include
 					// C++的头文件可以是.h的或无扩展名，C语言的是.h的
+#include"test05_structure.cpp"
 
 #include"test06_oop.cpp" // 自定义头文件在main方法中引入
 // .h头文件会报错，报无法解析的外部符号，	但cpp的可以
@@ -94,6 +95,10 @@ int main() // 函数头
 	// test05
 	//structureTest();
 	//jiaoHuan();
+	StructClass sc;
+	sc.test();
+	std::cout << "类对象的地址：" << &sc << "\n";
+	//sc.test(); // 类中方法访问不到 ？？？
 
 	// test06
 	//PerA personalA;
@@ -131,8 +136,8 @@ int main() // 函数头
 	//main20();
 
 	// test30
-	DataStructuresAndAlgorithms da;
-	da.DAMain();
+	//DataStructuresAndAlgorithms da;
+	//da.DAMain();
 
 
 
