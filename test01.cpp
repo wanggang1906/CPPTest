@@ -141,8 +141,8 @@ int main() // º¯ÊıÍ·
 	
 
 	// test31
-	test31_data_alg ts31 = test31_data_alg();
-	ts31.classTest();
+	//test31_data_alg ts31 = test31_data_alg();
+	//ts31.dataAlgMain();
 
 
 

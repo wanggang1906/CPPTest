@@ -8,8 +8,8 @@
 class DataStructuresAndAlgorithms30;
 
 
-void test();
-void DAMain();
+//void test();
+//void DAMain();
 
 
 
@@ -21,6 +21,7 @@ public:
 	void DAMain()
 	{
 		this->test();
+		this->testListMain();
 	}
 
 
@@ -39,4 +40,53 @@ private:
 		int age;
 	};
 	*/
+
+	// 链表节点
+	
+	struct ListNode {
+		int val;
+		ListNode* next;
+		ListNode(int x) :val(x), next(NULL) {}
+	};
+	
+
+	// 使用数组链表
+	ListNode* createLinkedList(int arr[], int n)
+	{
+		if (n == 0)
+		{
+			return NULL;
+		}
+		ListNode* head = new ListNode(arr[0]);
+		ListNode* curNode = head;
+		for (int i = 1; i < n; ++i)
+		{
+			curNode->next = new ListNode(arr[i]);
+			curNode = curNode->next;
+		}
+		return head;
+	}
+
+	// 打印链表
+	void printListNode(ListNode* head)
+	{
+		ListNode* curNode = head;
+		while (curNode)
+		{
+			std::cout << curNode->val << " -> ";
+			curNode = curNode->next;
+			return;
+		}
+	}
+
+	// 测试链表
+	void testListMain()
+	{
+		int arr[] = { 1,2,3,4,5 };
+		int n = sizeof(arr) / sizeof(int);
+		ListNode* head = this->createLinkedList(arr, n);
+		this->printListNode(head);
+		std::cout << "链表打印结束。" << "\n";
+
+	}
 };

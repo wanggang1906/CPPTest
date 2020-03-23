@@ -10,11 +10,24 @@ class DataStructuresAndAlgorithms30
 
 
 
+
 	
 public:
+	
+	struct ListNode {
+		int val;
+		ListNode* next;
+		ListNode(int x) :val(x), next(NULL) {}
+	};
+	
+
+
 	void test();
 	void DAMain();
-
+	ListNode* createLinkedList(int arr[], int n);
+	void printListNode(ListNode* head);
+	void printListNode(ListNode* head);
+	void testListMain();
 	
 
 /*
