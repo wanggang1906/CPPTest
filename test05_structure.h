@@ -10,10 +10,12 @@
 class StructClass
 {
 public:
-	int structureTest();
+	void structureTestMain();
+	void getStructureOfClass();
+	int structureTypeTest();
 	void jiaoHuan();
 	void swap(int* x, int* y);
-	void test();
+
 
 };
 

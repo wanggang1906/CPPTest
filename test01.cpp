@@ -1,4 +1,3 @@
-
 #include <fstream>
 
 //#include <iostream.h> // 头文件有扩展名时可以不用namespace
@@ -17,6 +16,7 @@
 //#include"test11_binary_tree.h" // 同时引入.cpp和.h会引起重复编译的错误
 
 #include "test30_data_str_alg.cpp"
+#include "test31_data_alg.h" // vs自动生成的这样导入没问题
 #include "test40_opencv.cpp"
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
@@ -39,9 +39,9 @@ int pointerTest();
 void dataSize();
 void dataType();
 
-// test05
-int structureTest();
-void jiaoHuan();
+// test05 // 该用类定义，不用再声明方法了
+//int structureTest();
+//void jiaoHuan();
 //void swap(int* x, int* y);
 
 // test06
@@ -95,8 +95,8 @@ int main() // 函数头
 	// test05
 	//structureTest();
 	//jiaoHuan();
-	StructClass sc;
-	sc.test();
+	StructClass sc = StructClass();
+	sc.structureTestMain();
 	std::cout << "类对象的地址：" << &sc << "\n";
 	//sc.test(); // 类中方法访问不到 ？？？
 
@@ -136,8 +136,13 @@ int main() // 函数头
 	//main20();
 
 	// test30
-	//DataStructuresAndAlgorithms da;
-	//da.DAMain();
+	DataStructuresAndAlgorithms30 da = DataStructuresAndAlgorithms30();
+	da.DAMain();
+	
+
+	// test31
+	test31_data_alg ts31 = test31_data_alg();
+	ts31.classTest();
 
 
 
