@@ -63,6 +63,9 @@
     <ClCompile Include="test31_data_alg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test21_Container.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test06_oop.h">
@@ -90,6 +93,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="test31_data_alg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test21_Container.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
