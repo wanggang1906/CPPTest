@@ -1,6 +1,17 @@
-#include <iostream>
 #include <string>
+
+#include <iostream>
 #include <vector>
+#include<algorithm> // sort
+#include<functional>
+
+#include<cstdlib> // abort()
+#include<cstdio> // snprintf()
+#include<ctime>
+#include<stdexcept>
+
+#include<array>
+
 
 
 // 教程网址
@@ -17,7 +28,7 @@
 
 using namespace std;
 const int NUM = 5;
-int main20()
+int tVector()
 {
 	// 向量
 	vector <string>names(NUM);    //定义矢量对象
@@ -38,4 +49,73 @@ int main20()
 		cout << names[i] << "\t" << sexs[i] << endl;
 	}
 	return 0;
+}
+
+
+// stl综合使用
+int stlUse()
+{
+	int ia[6] = {};
+	vector<int, allocator<int>> vi(ia, ia + 6);
+	std::cout << count_if(vi.begin(), vi.end(),
+		not1(bind2nd(less<int>(), 40)));
+	return 0;
+}
+
+// 向量测试
+void testVector(long& value)
+{
+	cout << "向量";
+	vector<string> c;
+	char buf[10];
+	clock_t timeStart = clock(); // 计时函数
+
+	for (long  i = 0; i < value; ++i)
+	{
+		try {
+			snprintf(buf, 10, "%d", rand());
+			c.push_back(string(buf));
+		}
+		catch (exception & p) {
+			cout << i << p.what() << endl;
+			abort();
+		}
+	}
+	// 常用的方法
+	cout << (clock() - timeStart) << endl;
+	cout << c.size() << endl;
+	cout << c.front() << endl;
+	cout << c.back() << endl;
+	cout << c.data() << endl;
+	cout << c.capacity() << endl;
+}
+
+
+// 
+void testArray()
+{
+#define ASIZE 10;
+	cout << "";
+	array<long, 10> c;
+	clock_t timeStart = clock();
+	for (long i = 0; i < 10; ++i) {
+		c[i] = rand();
+	}
+
+	//
+	cout << (clock() - timeStart) << endl;
+	cout << c.size() << endl;
+	cout << c.front() << endl;
+	cout << c.back() << endl;
+	cout << c.data() << endl;
+
+	long target;
+	timeStart = clock();
+	//qsort(c.data(), 10, sizeof(long), compareLongs);
+	//long* pItem = (long*)bsearch(&target, (c.data(), 10, sizeof(long));
+	//cout << (clock() - timeStart) << endl;
+	//if (pItem != NULL)
+	//	cout << *pItem << endl;
+	//else
+	//	cout << "not found" << endl;
 }
