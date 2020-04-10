@@ -136,13 +136,14 @@ int main() // º¯ÊıÍ·
 	//main20();
 
 	// test30
-	DataStructuresAndAlgorithms30 da = DataStructuresAndAlgorithms30();
-	da.DAMain();
+	//DataStructuresAndAlgorithms30 da = DataStructuresAndAlgorithms30();
+	//da.DAMain();
 	
 
 	// test31
-	//test31_data_alg ts31 = test31_data_alg();
-	//ts31.dataAlgMain();
+	test31_data_alg ts31 = test31_data_alg();
+	ts31.dataAlgMain();
+	//ts31.mainGraph();
 
 
 
