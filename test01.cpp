@@ -17,6 +17,8 @@
 
 #include "test30_data_str_alg.cpp"
 #include "test31_data_alg.h" // vs自动生成的这样导入没问题
+#include "test32_alg_of_dj.h"
+
 #include "test40_opencv.cpp"
 
 using namespace std; // using编译指令，命名空间，保证命名不重复，放在函数内表示只在本函数内使用
@@ -95,9 +97,9 @@ int main() // 函数头
 	// test05
 	//structureTest();
 	//jiaoHuan();
-	StructClass sc = StructClass();
-	sc.structureTestMain();
-	std::cout << "类对象的地址：" << &sc << "\n";
+	//StructClass sc = StructClass();
+	//sc.structureTestMain();
+	//std::cout << "类对象的地址：" << &sc << "\n";
 	//sc.test(); // 类中方法访问不到 ？？？
 
 	// test06
@@ -141,14 +143,18 @@ int main() // 函数头
 	
 
 	// test31
-	test31_data_alg ts31 = test31_data_alg();
-	ts31.dataAlgMain();
+	//test31_data_alg ts31 = test31_data_alg();
+	//ts31.dataAlgMain();
 	//ts31.mainGraph();
+
+	// test32
+	test32_alg_of_dj ts32 = test32_alg_of_dj();
+	ts32.main32();
 
 
 
 	// test40
-	opencvTest cvt;
+	//opencvTest cvt;
 	//cvt.opencvMain();
 	
 	return 0;

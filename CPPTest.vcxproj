@@ -144,6 +144,7 @@
     <ClCompile Include="test21_Container.cpp" />
     <ClCompile Include="test30_data_str_alg.cpp" />
     <ClCompile Include="test31_data_alg.cpp" />
+    <ClCompile Include="test32_alg_of_dj.cpp" />
     <ClCompile Include="test40_opencv.cpp" />
     <ClCompile Include="test50_niu_ke_oj.cpp" />
   </ItemGroup>
@@ -157,6 +158,7 @@
     <ClInclude Include="test21_Container.h" />
     <ClInclude Include="test30_data_str_alg.h" />
     <ClInclude Include="test31_data_alg.h" />
+    <ClInclude Include="test32_alg_of_dj.h" />
     <ClInclude Include="test40_opencv.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
