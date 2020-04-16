@@ -10,12 +10,13 @@
 class test31_data_alg
 {
 public:
+	/**
 
 	// 定义链表节点
 	struct ListNode {
 		int val;
 		ListNode* next;
-		ListNode(int x) :val(x), next(NULL) {}
+		ListNode(int x): val(x), next(NULL) {} // 这里是冒号
 	};
 
 	void classTest();
@@ -28,6 +29,9 @@ public:
 	ListNode* createLinkedList(int arr[], int n);
 	void printListNode(ListNode* head);
 	void testListMain();
+	**/
+
+
 
 	 //图
 //#define MaxVertexNum 10000//最多顶点（结点）数

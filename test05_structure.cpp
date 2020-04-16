@@ -1,4 +1,5 @@
 #include<iostream>
+//#include "test05_structure.h"
 
 
 
@@ -9,7 +10,7 @@ class StructClass
 {
 
 private:
-	// 定义结构体数据类型
+	// 定义两个结构体数据类型
 	typedef struct info {
 		std::string name;
 		int age;
@@ -27,6 +28,7 @@ public:
 	{
 		this->getStructureOfClass();
 	}
+
 
 	// 结构体
 	// .和 -> 的区别，如结构变量时用. 指针指向时用 -> 
@@ -77,3 +79,26 @@ public:
 
 
 };
+
+
+
+
+
+// 单独测试类中定义结构体指针，并引用
+
+
+/**
+
+typedef struct structTe {
+	int a;
+	int b;
+};
+
+structTe* StructOfSecondClass::structTeOfFunction(int x) {
+	std::cout << "StructOfSecondClass" << "\n";
+	structTe* stTe = new structTe();
+	return stTe;
+}
+
+
+**/

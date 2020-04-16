@@ -98,8 +98,8 @@ int main() // 函数头
 	// test05
 	//structureTest();
 	//jiaoHuan();
-	//StructClass sc = StructClass();
-	//sc.structureTestMain();
+	StructClass sc = StructClass();
+	sc.structureTestMain();
 	//std::cout << "类对象的地址：" << &sc << "\n";
 	//sc.test(); // 类中方法访问不到 ？？？
 
@@ -144,8 +144,8 @@ int main() // 函数头
 	
 
 	// test31
-	test31_data_alg ts31 = test31_data_alg();
-	ts31.dataAlgMain();
+	//test31_data_alg ts31 = test31_data_alg();
+	//ts31.dataAlgMain();
 	//ts31.mainGraph();
 
 	// test32

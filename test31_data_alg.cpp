@@ -9,7 +9,7 @@
 // cpp文件只写类的实现，是通过内联函数实现的
 // h文件只写类的定义，在多个文件中引用时编译器只编译一次，引用时也只包含头文件
 
-
+/**
 
 // 数据结构类主方法
 void test31_data_alg::dataAlgMain()
@@ -72,6 +72,7 @@ void test31_data_alg::testListMain()
 
 }
 
+**/
 
 
 

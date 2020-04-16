@@ -7,14 +7,32 @@
 
 // 类的定义和实现分离
 
+class StructOfSecondClass {
+public:
+	typedef struct structTe {
+		int a;
+		int b;
+	};
+
+	structTe* structTeOfFunction(int x);
+
+};
+
+
+
 class StructClass
 {
 public:
+
+
+
 	void structureTestMain();
 	void getStructureOfClass();
 	int structureTypeTest();
 	void jiaoHuan();
 	void swap(int* x, int* y);
+
+
 
 
 };
