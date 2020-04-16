@@ -2,8 +2,8 @@
 #include<iostream>
 
 
-#ifndef _test31_da_H_  // 条件编译，只编译一次
-#define _test31_da_H_
+//#ifndef _test31_da_H_  // 条件编译，只编译一次
+//#define _test31_da_H_
 
 
 
@@ -100,5 +100,5 @@ public:
 
 
 
-#endif
+//#endif
 
