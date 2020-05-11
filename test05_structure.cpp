@@ -19,6 +19,14 @@ private:
 	typedef struct infoName {
 		int af;
 	};
+
+
+	// 结构体定义
+	typedef struct {
+		int data[2];
+		int length;
+	}SqList;
+
 	
 	// 结构体必须要初始化
 

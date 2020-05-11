@@ -140,6 +140,7 @@
     <ClCompile Include="test10_arithmentic.cpp" />
     <ClCompile Include="test11_binary_tree.cpp" />
     <ClCompile Include="test12_matrix01.cpp" />
+    <ClCompile Include="test13_sqlist.cpp" />
     <ClCompile Include="test20_stl.cpp" />
     <ClCompile Include="test21_Container.cpp" />
     <ClCompile Include="test30_data_str_alg.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="test10_arithmentic.h" />
     <ClInclude Include="test11_binary_tree.h" />
     <ClInclude Include="test12_matrix.h" />
+    <ClInclude Include="test13_sqlist.h" />
     <ClInclude Include="test21_Container.h" />
     <ClInclude Include="test30_data_str_alg.h" />
     <ClInclude Include="test31_data_alg.h" />

@@ -15,6 +15,8 @@
 #include"test11_binary_tree.cpp"
 //#include"test11_binary_tree.h" // 同时引入.cpp和.h会引起重复编译的错误
 
+#include"test13_sqlist.h"
+
 #include "test30_data_str_alg.cpp"
 #include "test31_data_alg.h" // vs自动生成的这样导入没问题
 #include "test31_data_alg.cpp"
@@ -57,6 +59,7 @@ void dataType();
 // test10
 
 
+
 // test20
 int main20();
 
@@ -75,7 +78,6 @@ int main() // 函数头
 
 	std::cout << "<< " << endl; // endl表示光标重起一行，作用类似换行符\n
 	// << 是对用算符的重载，编译器自动根据上下文判断符号的实际含义，C语言中 &和*也是重载，表示位运算和逻辑运算
-
 
 
 
@@ -134,6 +136,12 @@ int main() // 函数头
 	//binaryTree.testStruct();
 
 	//bTree.maxDepth;
+
+
+	// test13
+	test13_sqlist sl = test13_sqlist();
+	sl.sqlistMain
+	
 
 	// test20
 	//main20();
