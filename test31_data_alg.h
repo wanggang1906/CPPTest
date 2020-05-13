@@ -5,12 +5,12 @@
 //#ifndef _test31_da_H_  // 条件编译，只编译一次
 //#define _test31_da_H_
 
-
+/*
 
 class test31_data_alg
 {
 public:
-	/**
+	
 
 	// 定义链表节点
 	struct ListNode {
@@ -29,7 +29,7 @@ public:
 	ListNode* createLinkedList(int arr[], int n);
 	void printListNode(ListNode* head);
 	void testListMain();
-	**/
+	
 
 
 
@@ -106,3 +106,4 @@ public:
 
 //#endif
 
+*/

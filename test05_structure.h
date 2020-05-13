@@ -1,8 +1,12 @@
 #pragma once
 
+/*
+
+
 // #ifndef 1 // 自动生成
 #ifndef _test05_structure_H_
 #define _test05_structure_H_
+
 
 
 // 类的定义和实现分离
@@ -40,3 +44,4 @@ public:
 
 #endif // !1
 
+*/

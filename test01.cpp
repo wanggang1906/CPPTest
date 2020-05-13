@@ -15,7 +15,7 @@
 #include"test11_binary_tree.cpp"
 //#include"test11_binary_tree.h" // 同时引入.cpp和.h会引起重复编译的错误
 
-#include"test13_sqlist.h"
+#include "test13_sqlist.h"
 
 #include "test30_data_str_alg.cpp"
 #include "test31_data_alg.h" // vs自动生成的这样导入没问题
@@ -100,8 +100,8 @@ int main() // 函数头
 	// test05
 	//structureTest();
 	//jiaoHuan();
-	StructClass sc = StructClass();
-	sc.structureTestMain();
+	//StructClass sc = StructClass();
+	//sc.structureTestMain();
 	//std::cout << "类对象的地址：" << &sc << "\n";
 	//sc.test(); // 类中方法访问不到 ？？？
 
@@ -139,8 +139,8 @@ int main() // 函数头
 
 
 	// test13
-	test13_sqlist sl = test13_sqlist();
-	sl.sqlistMain
+	//test13_sqlist sl = test13_sqlist();
+	//sl.sqlistMain();
 	
 
 	// test20

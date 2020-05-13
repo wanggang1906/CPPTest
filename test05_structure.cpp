@@ -1,7 +1,7 @@
 #include<iostream>
 //#include "test05_structure.h"
 
-
+/*
 
 // ÀàÉùÃ÷Ç°ÖÃ £¿£¿£¿
 //class StructClass;
@@ -88,7 +88,7 @@ public:
 
 };
 
-
+*/
 
 
 
